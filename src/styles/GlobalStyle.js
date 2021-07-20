@@ -2,11 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
-    --background-dark-color: #10121A;  
-    --font-light-color: #6a78a6; 
-    --sidebar-dark-color: #06113d;
-    --border-color: #1332AD;
-    --primary-color: #0234FA; 
+    --background-dark-color: #02102c;  
+    --font-light-color: #C8D4FA; 
+    --sidebar-dark-color: #042557;
+    --border-color: #136fad;
+    --primary-color: #029ffa; 
+    --white-color: #FFF;
 }
 * {
     margin: 0; 
@@ -27,7 +28,21 @@ a{
     font-family: inherit;
     color: inherit;
     font-size: inherit;
+    font-size: 1rem;
 }
+
+h1{
+        font-size: 4rem;
+        color: var(--white-color);
+        span{
+            font-size: 4rem;
+
+        }
+    }
+
+    span{
+        color: var(--primary-color)
+    }
 `; 
 
 export default GlobalStyle;
