@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from "./Components/Sidebar";
 import styled from "styled-components";
 import Home from "./Pages/Home"
+import About from "./Pages/About"
+import {Route, Switch} from "react-router"; 
 
 function App() {
   return (
@@ -9,7 +11,15 @@ function App() {
       <Sidebar/>
       <MainContentStyled>
        
-      <Home/>
+       <Switch>
+         <Route path="/" exact>
+          <Home/>
+         </Route>
+         <Route path="/about" exact>
+          <About/>
+         </Route>
+       </Switch>
+     
       
       </MainContentStyled>
 
