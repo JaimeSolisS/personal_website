@@ -3,6 +3,7 @@ import Sidebar from "./Components/Sidebar";
 import styled from "styled-components";
 import Home from "./Pages/Home"
 import About from "./Pages/About"
+import Resume from "./Pages/Resume"
 import {Route, Switch} from "react-router"; 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
          </Route>
          <Route path="/about" exact>
           <About/>
+         </Route>
+         <Route path="/resume" exact>
+          <Resume/>
          </Route>
        </Switch>
      
