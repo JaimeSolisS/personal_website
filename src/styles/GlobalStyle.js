@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle `
 :root {
     --background-dark-color: #02102c;  
     --font-light-color: #C8D4FA; 
@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     --border-color: #136fad;
     --primary-color: #029ffa; 
     --white-color: #FFF;
+    --background-light-color-2: #042557; 
 }
 * {
     margin: 0; 
@@ -43,6 +44,6 @@ h1{
     span{
         color: var(--primary-color)
     }
-`; 
+`;
 
 export default GlobalStyle;
