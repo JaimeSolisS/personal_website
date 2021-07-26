@@ -5,6 +5,7 @@ import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Resume from "./Pages/Resume"
 import Projects from "./Pages/Projects"
+import Contact from "./Pages/Contact"
 import {Route, Switch} from "react-router"; 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
          </Route>
          <Route path="/projects" exact>
           <Projects/>
+         </Route>
+         <Route path="/contact" exact>
+          <Contact/>
          </Route>
        </Switch>
      
