@@ -60,6 +60,28 @@ h1{
     span{
         color: var(--primary-color)
     }
+
+//Nav Toggler
+.menu{
+      position: absolute;
+      right: 5%;
+      top: 3%; 
+      display: none;
+      z-index: 15;
+      svg{
+          font-size: 3rem;
+      }
+    }
+    .nav-toggle{
+        transform: translateX(0);
+        z-index: 20;
+    }
+  @media screen and (max-width:1200px){
+    .menu{
+        display: block;
+    }
+  }
+
 `;
 
 export default GlobalStyle;
