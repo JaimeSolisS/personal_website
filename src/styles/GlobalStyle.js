@@ -17,12 +17,13 @@ const GlobalStyle = createGlobalStyle `
     list-style: none;
     text-decoration: none;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
+    transition: all .4s ease-in-out;
 }
 
 body::-webkit-scrollbar{
@@ -53,8 +54,10 @@ h1{
         color: var(--white-color);
         span{
             font-size: 4rem;
-
         }
+        @media screen and (max-width: 502px){
+        font-size: 3rem
+    }
     }
 
     span{
