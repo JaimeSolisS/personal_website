@@ -1,14 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
 :root {
-    --background-dark-color: #02102c;  
-    --font-light-color: #C8D4FA; 
-    --sidebar-dark-color: #042557;
-    --border-color: #136fad;
-    --primary-color: #029ffa; 
-    --white-color: #FFF;
+    --background-dark-color: #0a192f; 
+    --sidebar-dark-color: #0b1a43; 
+    --primary-color: #16b8f3; 
     --background-light-color-2: #042557; 
+    --border-color: #0b5ea2;
+    --font-light-color: #ccd6f6; 
+    --white-color: #e6f1ff;
+    
 }
 * {
     margin: 0; 
