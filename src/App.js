@@ -11,6 +11,7 @@ import { Route, Switch } from "react-router";
 import { IconButton } from "@material-ui/core";
 import { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import Loader from "./Components/Loader";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -20,20 +21,13 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 4000);
   }, []);
 
   return (
     <div className="App">
       {loading ? (
-        <LoaderStyled>
-          <PropagateLoader
-            color={"#16b8f3"}
-            loading={loading}
-            size={30}
-            margin={10}
-          />
-        </LoaderStyled>
+        <Loader />
       ) : (
         <div>
           <Sidebar navToggle={navToggle} />
@@ -90,12 +84,6 @@ const MainContentStyled = styled.main`
       background-color: var(--border-color);
     }
   }
-`;
-
-const LoaderStyled = styled.div`
-  position: relative;
-  bottom: -300px;
-  left: 50%;
 `;
 
 export default App;
