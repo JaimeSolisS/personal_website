@@ -12,6 +12,7 @@ import { IconButton } from "@material-ui/core";
 import { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import Loader from "./Components/Loader";
+import Navbar from "./Components/Navbar";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -30,12 +31,15 @@ function App() {
         <Loader />
       ) : (
         <div>
-          <Sidebar navToggle={navToggle} />
+          {/* <Sidebar navToggle={navToggle} /> */}
+          <Navbar />
 
           <div className="menu">
+            {/*
             <IconButton onClick={() => setNavToggle(!navToggle)}>
               <MenuIcon />
             </IconButton>
+            */}
           </div>
           <MainContentStyled>
             <Switch>
@@ -64,8 +68,9 @@ function App() {
 
 const MainContentStyled = styled.main`
   position: relative;
-  margin-left: 16.3rem;
-  min-height: 100vh;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  min-height: 90vh;
   @media screen and (max-width: 1200px) {
     margin-left: 0;
   }
