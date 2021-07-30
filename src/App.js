@@ -13,10 +13,16 @@ import { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
+import Sidebar2 from "./Components/Sidebar2";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -32,7 +38,8 @@ function App() {
       ) : (
         <div>
           {/* <Sidebar navToggle={navToggle} /> */}
-          <Navbar />
+          <Sidebar2 isOpen={isOpen} toggle={toggle} />
+          <Navbar toggle={toggle} />
 
           <div className="menu">
             {/*

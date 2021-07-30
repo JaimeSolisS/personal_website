@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 import Pdf from "../documents/resume.pdf";
 import Logo from "../img/logo.png";
 
-function Navbar(props) {
+function Navbar({ toggle }) {
   return (
     <NavStyled>
       <NavbarContainerStyled>
@@ -17,7 +17,7 @@ function Navbar(props) {
             />
           </div>
         </NavLogoStyled>
-        <MobileIconStyled>
+        <MobileIconStyled onClick={toggle}>
           <FaBars />
         </MobileIconStyled>
         <NavMenuStyled>
