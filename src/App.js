@@ -14,6 +14,8 @@ import PropagateLoader from "react-spinners/PropagateLoader";
 import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import Sidebar2 from "./Components/Sidebar2";
+import { TransitionGroup } from "react-transition-group";
+import Fade from "./Transitions/Fade";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -38,6 +40,7 @@ function App() {
       ) : (
         <div>
           {/* <Sidebar navToggle={navToggle} /> */}
+
           <Sidebar2 isOpen={isOpen} toggle={toggle} />
           <Navbar toggle={toggle} />
 
@@ -48,30 +51,41 @@ function App() {
             </IconButton>
             */}
           </div>
-          <MainContentStyled>
-            <Switch>
-              <Route path="/" exact>
-                <Home />
-              </Route>
-              <Route path="/about" exact>
-                <About />
-              </Route>
-              <Route path="/resume" exact>
-                <Resume />
-              </Route>
-              <Route path="/projects" exact>
-                <Projects />
-              </Route>
-              <Route path="/contact" exact>
-                <Contact />
-              </Route>
-            </Switch>
-          </MainContentStyled>
+          <Route
+            render={({ location }) => (
+              <MainContentStyled>
+                <TransitionGroup>
+                  <Fade key={location.key} timeout={500}>
+                    <Switch location={location}>
+                      <Route path="/" exact>
+                        <Home />
+                      </Route>
+                      <Route path="/about" exact>
+                        <About />
+                      </Route>
+                      <Route path="/resume" exact>
+                        <Resume />
+                      </Route>
+                      <Route path="/projects" exact>
+                        <Projects />
+                      </Route>
+                      <Route path="/contact" exact>
+                        <Contact />
+                      </Route>
+                    </Switch>
+                  </Fade>
+                </TransitionGroup>
+              </MainContentStyled>
+            )}
+          />
         </div>
       )}
     </div>
   );
 }
+
+const appearDuration = 500;
+const transitionName = `example`;
 
 const MainContentStyled = styled.main`
   position: relative;
@@ -95,6 +109,21 @@ const MainContentStyled = styled.main`
       min-height: 100vh;
       background-color: var(--border-color);
     }
+  }
+
+  &:enter {
+    opacity: 0.01;
+  }
+  &:enter-active {
+    opacity: 1;
+    transition: opacity 1000ms ease-in;
+  }
+  &:exit {
+    opacity: 1;
+  }
+  &:exit-active {
+    opacity: 0.01;
+    transition: opacity 800ms ease-in;
   }
 `;
 
