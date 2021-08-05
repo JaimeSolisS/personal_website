@@ -16,6 +16,7 @@ import Navbar from "./Components/Navbar";
 import Sidebar2 from "./Components/Sidebar2";
 import { TransitionGroup } from "react-transition-group";
 import Fade from "./Transitions/Fade";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -71,6 +72,9 @@ function App() {
                       </Route>
                       <Route path="/contact" exact>
                         <Contact />
+                      </Route>
+                      <Route>
+                        <NotFound />
                       </Route>
                     </Switch>
                   </Fade>
