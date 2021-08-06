@@ -9,9 +9,9 @@ function ImageSection() {
       <div className="left-content">
         <p className="paragraph">
           Hello! My name is Jaime and I enjoy translating data into valuable
-          information. My interest started in 2019 when I enrolled in a Big
-          data, Data Analytics, and Data Science program at my university. In
-          this program, I had the opportunity of working with{" "}
+          information. My journey in data science began when in 2019 when I
+          enrolled in a Big data, Data Analytics, and Data Science program at my
+          university. In this program, I had the opportunity of working with{" "}
           <a href="https://www.cemexmexico.com/" target="_blank">
             <span>
               a global leader company in the building materials industry
