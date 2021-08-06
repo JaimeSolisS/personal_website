@@ -55,15 +55,29 @@ h1{
         color: var(--white-color);
         span{
             font-size: 4rem;
+            
         }
-        @media screen and (max-width: 502px){
-        font-size: 3rem
+        @media screen and (max-width: 768px){
+        font-size: 2rem
     }
     }
 
     span{
         color: var(--primary-color)
     }
+
+    h2{
+        font-size: 2rem;
+        color: var(--white-color);
+        span{
+            font-size: 4rem;
+        }
+        @media screen and (max-width: 502px){
+        font-size: 3rem
+    }
+    }
+
+  
 
 //Nav Toggler
 .menu{
