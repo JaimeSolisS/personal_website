@@ -7,35 +7,46 @@ function ImageSection() {
   return (
     <ImageSectionStyled>
       <div className="left-content">
-        <h4>
-          I am <span>Jaime Solis</span>
-        </h4>
-
         <p className="paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus dignissimos dolorem quis quia quod fugiat ipsa
-          pariatur, veniam ex, expedita maxime dolor nobis ullam nam debitis
-          nesciunt vel sunt dicta.
+          Hello! My name is Jaime and I enjoy translating data into valuable
+          information. My interest started in 2019 when I enrolled in a Big
+          data, Data Analytics, and Data Science program at my university. In
+          this program, I had the opportunity of working with{" "}
+          <a href="https://www.cemexmexico.com/" target="_blank">
+            <span>
+              a global leader company in the building materials industry
+            </span>
+          </a>
+          . I also learned a lot about Python, Pandas, Scikit-learn, and
+          Tableau!
         </p>
-        <div className="about-info">
-          <div className="info-title">
-            <p>Full Name</p>
-            <p>Age</p>
-            <p>Nationality</p>
-            <p>Languages</p>
-            <p>Location</p>
-          </div>
-          <div className="info">
-            <p>Jaime Solis</p>
-            <p>24</p>
-            <p>Lorem</p>
-            <p>Lorem, Ipsum</p>
-            <p>Lorem</p>
-          </div>
-        </div>
-        <a href={Pdf} target="_blank" rel="noreferrer">
-          <PrimaryButton title={"Resume"} />
-        </a>
+        <p>
+          I'm currently an Engineer at{" "}
+          <a href="https://pkglobal.com/" target="_blank">
+            <span>PK</span>{" "}
+          </a>
+          building big data solutions for big companies. I recently graduated
+          from <span>Tec de Monterrey</span> with Data Science and Advanced
+          Analytics Concentrations.
+        </p>
+        <br />
+
+        <p>
+          <span>When I'm not in front of a computer screen</span>, I'm probably
+          watching movies and series, reading a book, listening to records, or
+          traveling.
+        </p>
+        <br />
+        <p>Here are a few technologies I've been working with recently:</p>
+        <br />
+        <ul>
+          <li>Scala</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Spark</li>
+          <li>Streamlit</li>
+          <li>React</li>
+        </ul>
       </div>
       <div className="right-content">
         <img
@@ -87,11 +98,28 @@ const ImageSectionStyled = styled.div`
   }
   .right-content {
     width: 100%;
+    margin-left: 30px;
     img {
       width: 95%;
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  ul {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style-position: inside;
+  }
+  li {
+    list-style-type: none;
+  }
+
+  li::before {
+    content: "▶︎ ";
+    color: var(--primary-color);
+    padding-right: 1rem;
   }
 `;
 
