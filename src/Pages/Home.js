@@ -8,6 +8,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import Pdf from "../documents/resume.pdf";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
@@ -69,6 +70,7 @@ function Home() {
           </a>
         </div>
       </div>
+      <Footer />
     </HomeStyled>
   );
 }
@@ -93,14 +95,6 @@ const HomeStyled = styled.header`
     transform: translate(-50%, -50%);
     //text-align: center;
     width: 50%;
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-
-      p {
-        font-size: 0.8rem;
-      }
-    }
 
     .hello {
       text-align: left;
