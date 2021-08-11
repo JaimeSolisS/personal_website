@@ -4,6 +4,7 @@ import Title from "../Components/Title";
 import projects from "../data/projects";
 import Menu from "../Components/Menu";
 import Button from "../Components/Button";
+import Footer from "../Components/Footer";
 
 const sortedByName = projects.sort((a, b) =>
   a.category.localeCompare(b.category)
@@ -28,13 +29,16 @@ function Projects() {
     setMenuItems(filteredData);
   };
   return (
-    <MainLayout>
-      <Title title={"Projects"} />
-      <InnerLayout>
-        <Button filter={filter} button={button} />
-        <Menu menuItem={menuItem} />
-      </InnerLayout>
-    </MainLayout>
+    <>
+      <MainLayout>
+        <Title title={"Projects"} />
+        <InnerLayout>
+          <Button filter={filter} button={button} />
+          <Menu menuItem={menuItem} />
+        </InnerLayout>
+      </MainLayout>
+      <Footer />
+    </>
   );
 }
 

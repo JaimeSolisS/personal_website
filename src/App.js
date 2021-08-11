@@ -17,6 +17,7 @@ import Sidebar2 from "./Components/Sidebar2";
 import { TransitionGroup } from "react-transition-group";
 import Fade from "./Transitions/Fade";
 import NotFound from "./Pages/NotFound";
+import Footer from "./Components/Footer";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -44,14 +45,15 @@ function App() {
 
           <Sidebar2 isOpen={isOpen} toggle={toggle} />
           <Navbar toggle={toggle} />
-
+          {/*
           <div className="menu">
-            {/*
+           
             <IconButton onClick={() => setNavToggle(!navToggle)}>
               <MenuIcon />
             </IconButton>
-            */}
+           
           </div>
+           */}
           <Route
             render={({ location }) => (
               <MainContentStyled>
@@ -96,8 +98,8 @@ const MainContentStyled = styled.main`
   margin-left: 5rem;
   margin-right: 5rem;
   min-height: 90vh;
-  @media screen and (max-width: 1200px) {
-    margin-left: 0;
+  @media screen and (max-width: 768px) {
+    left: 0;
   }
   .lines {
     position: absolute;
