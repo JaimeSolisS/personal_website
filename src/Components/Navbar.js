@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import Pdf from "../documents/resume.pdf";
-import Logo from "../img/logo.png";
+import Logo from "../img/logo.svg";
 
 function Navbar({ toggle }) {
   return (
@@ -11,10 +11,7 @@ function Navbar({ toggle }) {
       <NavbarContainerStyled>
         <NavLogoStyled to="/">
           <div className="avatar">
-            <img
-              src="https://avatars.githubusercontent.com/u/26722249?v=4"
-              alt=""
-            />
+            <img src={Logo} alt="" />
           </div>
         </NavLogoStyled>
         <MobileIconStyled onClick={toggle}>
@@ -86,6 +83,7 @@ const NavLogoStyled = styled(Link)`
     img {
       height: 60px;
       border-radius: 50%;
+      border: #e6f1ff solid 0.1px;
     }
   }
 `;

@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import Pdf from "../documents/resume.pdf";
-import Logo from "../img/logo.png";
 
 function Footer({ toggle }) {
   return (
